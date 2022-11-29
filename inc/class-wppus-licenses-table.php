@@ -161,7 +161,10 @@ class WPPUS_Licenses_Table extends WP_List_Table {
 
 		$sql  .= " ORDER BY $order_by $order LIMIT %d OFFSET %d";
 		$query = $wpdb->prepare( $sql, $args ); // @codingStandardsIgnoreLine
-		error_log($query);
+		//romain
+		// supp error_log
+		// error_log($query);
+		///
 		$items = $wpdb->get_results( $query, ARRAY_A ); // @codingStandardsIgnoreLine
 
 		foreach ( $items as $index => $item ) {
